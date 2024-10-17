@@ -1,0 +1,429 @@
+/********* Modèle CSS **********/
+:racine {
+    --primaire : #6244C5 ;
+    --secondaire : #FFC448 ;
+    --lumière: #FAFAFB;
+    --dark: #12141D;
+}
+
+.retour en haut {
+    position : fixe ;
+    affichage : aucun ;
+    droite : 45px ;
+    bas : 45 px ;
+    z-index: 99;
+}
+
+.mon-6 {
+    marge supérieure : 6 rem ;
+    marge inférieure : 6 rem ;
+}
+
+.py-6 {
+    rembourrage supérieur : 6rem ;
+    rembourrage inférieur : 6 rem ;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacité : 0 ;
+    visibilité : caché ;
+    transition : opacité .5s atténuation, visibilité 0s linéaire .5s ;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition : opacité .5s atténuation, visibilité 0s linéaire 0s ;
+    visibilité : visible ;
+    opacité : 1 ;
+}
+
+
+/*** Bouton ***/
+.btn {
+    poids de police : 500 ;
+    transition : .5s;
+}
+
+.btn.btn-primaire,
+.btn.btn-secondaire {
+    couleur: #FFFFFF;
+}
+
+.btn-carré {
+    largeur: 38px;
+    hauteur : 38px ;
+}
+
+.btn-sm-carré {
+    largeur: 32px;
+    hauteur : 32px ;
+}
+
+.btn-lg-carré {
+    largeur : 48px ;
+    hauteur : 48px ;
+}
+
+.btn-carré,
+.btn-sm-carré,
+.btn-lg-carré {
+    rembourrage : 0 ;
+    affichage : flex ;
+    align-items:centre;
+    justifier-contenu : centre ;
+    poids de police : normal ;
+}
+
+
+/*** Barre de navigation ***/
+.navbar.fixed-top {
+    affichage : aucun ;
+    transition : .5s;
+}
+
+.navbar .navbar-nav .nav-lien {
+    rembourrage : 20 px 15 px ;
+    couleur : var(--dark);
+    taille de police : 18 px ;
+    poids de police : 600 ;
+    contour : aucun ;
+}
+
+.navbar .navbar-nav .nav-link: survol,
+.navbar .navbar-nav .nav-link.active {
+    couleur : var(--primary);
+}
+
+@media (largeur maximale : 991,98 px) {
+    .navbar .navbar-nav .nav-lien {
+        remplissage : 10px 0 ;
+    }
+}
+
+
+/*** En-tête ***/
+#maison {
+    marge inférieure : 6 rem ;
+    arrière-plan : url(../img/bg-header.png) en haut à gauche sans répétition ;
+}
+
+.curseur typé {
+    taille de police : 30 px ;
+    couleur : var(--dark);
+}
+
+.btn-jouer {
+    position : relative ;
+    affichage : bloc ;
+    box-sizing : boîte-de-contenu ;
+    largeur : 16px ;
+    hauteur : 26px ;
+    rayon de la bordure : 100 %;
+    bordure : aucune ;
+    aperçu : aucun !important ;
+    rembourrage : 18px 20px 20px 28px ;
+    arrière-plan : var(--primary);
+}
+
+.btn-play:avant {
+    contenu: "";
+    position : absolue ;
+    z-index: 0;
+    gauche : 50 % ;
+    haut : 50 % ;
+    transformer : translateX(-50%) translateY(-50%);
+    affichage : bloc ;
+    largeur : 60px ;
+    hauteur : 60px ;
+    arrière-plan : var(--primary);
+    rayon de la bordure : 100 %;
+    animation : impulsion-bordure 1500 ms atténuation infinie ;
+}
+
+.btn-play:après {
+    contenu: "";
+    position : absolue ;
+    z-index: 1;
+    gauche : 50 % ;
+    haut : 50 % ;
+    transformer : translateX(-50%) translateY(-50%);
+    affichage : bloc ;
+    largeur : 60px ;
+    hauteur : 60px ;
+    arrière-plan : #FFFFFF ;
+    rayon de la bordure : 100 %;
+    transition : toutes les 200 ms ;
+}
+
+.btn-play span {
+    affichage : bloc ;
+    position : relative ;
+    z-index: 3;
+    largeur: 0;
+    hauteur: 0;
+    gauche : -1px ;
+    bordure gauche : 16 px solide var(--primary);
+    bordure supérieure : 11 px solide et transparent ;
+    bordure inférieure : 11 px solide et transparent ;
+}
+
+@keyframes bordure d'impulsion {
+    0% {
+        transformer : translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacité : 1 ;
+    }
+
+    100% {
+        transformer : translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+        opacité : 0 ;
+    }
+}
+
+.modal-vidéo .modal-dialog {
+    position : relative ;
+    largeur maximale : 800 px ;
+    marge: 60px auto 0 auto;
+}
+
+.modal-vidéo .modal-corps {
+    position : relative ;
+    rembourrage : 0 px ;
+}
+
+.modal-vidéo .close {
+    position : absolue ;
+    largeur : 30px ;
+    hauteur: 30px;
+    droite : 0px ;
+    haut : -30px ;
+    z-index : 999 ;
+    taille de police : 30 px ;
+    poids de police : normal ;
+    couleur: #FFFFFF;
+    arrière-plan : #000000 ;
+    opacité : 1 ;
+}
+
+
+/*** À propos ***/
+#environ .années .display-1 {
+    taille de police : 10 rem ;
+    hauteur de ligne : 9 rem ;
+}
+
+#environ .ans h5 {
+    espacement des lettres : 30 px ;
+    marge droite : -30px ;
+}
+
+
+/*** Compétences ***/
+#compétence .progrès {
+    hauteur: 5px;
+    rayon de la bordure : 5 px ;
+}
+
+#compétence .progrès .barre de progression {
+    largeur: 0px;
+    rayon de la bordure : 5 px ;
+    transition : 3s ;
+}
+
+#compétence .nav-pills .nav-link {
+    couleur : var(--dark);
+}
+
+#compétence .nav-pills .nav-link.active {
+    couleur: #FFFFFF;
+}
+
+#compétence .tab-content hr {
+    largeur : 30px ;
+}
+
+
+/*** Service ***/
+.élément de service .bg-icon {
+    largeur : 100px ;
+    hauteur : 100px ;
+    affichage : flex ;
+    align-items:centre;
+    justifier-contenu : centre ;
+    arrière-plan : url(../img/bg-icon.png) centre centre pas de répétition ;
+    background-size: couverture;
+}
+
+
+/*** Portefeuille de projets ***/
+#portefeuille-fltres li {
+    affichage : bloc en ligne ;
+    poids de police : 500 ;
+    couleur : var(--dark);
+    curseur : pointeur ;
+    transition : .5s;
+    bordure inférieure : 2 px solide et transparente ;
+}
+
+#portfolio-flters li:hover,
+#portefeuille-filtres li.active {
+    couleur : var(--primary);
+    couleur de la bordure : var(--primary);
+}
+
+.portfolio-img {
+    position : relative ;
+}
+
+.portfolio-btn {
+    position : absolue ;
+    largeur : 100 % ;
+    hauteur : 100 % ;
+    haut : 0 ;
+    gauche : 0 ;
+    arrière-plan : rgba(98, 68, 197, .9) ;
+    affichage : flex ;
+    aligner-éléments : flex-end ;
+    justifier-contenu : flex-start ;
+    rembourrage : 30 px ;
+    rembourrage inférieur : 100 px !important ;
+    opacité : 0 ;
+    transition : .5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+    opacité : 1 ;
+    rembourrage inférieur : 30 px !important ;
+}
+
+
+/*** Équipe ***/
+.élément d'équipe img {
+    transition : .5s;
+}
+
+.élément d'équipe:hover img {
+    opacité : .7 ;
+}
+
+.élément-d'équipe .texte-d'équipe {
+    position : absolue ;
+    gauche : 0 ;
+    droite : 60px ;
+    bas : 30px ;
+    affichage : flex ;
+    align-items:centre;
+    justifier-contenu : espace-entre ;
+    opacité : 0 ;
+    transition : .5s;
+}
+
+.élément d'équipe : survol .texte d'équipe {
+    droite : 30px ;
+    opacité : 1 ;
+}
+
+.élément-d'équipe .texte-d'équipe div {
+    transition : .5s;
+}
+
+.élément d'équipe : survol .texte d'équipe div {
+    marge gauche : 30px ;
+}
+
+
+/*** Témoignage ***/
+.témoignage-gauche,
+.témoignage-droit {
+    position : relative ;
+}
+
+.témoignage-gauche img,
+.témoignage-droit img {
+    position : absolue ;
+    rembourrage : 5 px ;
+    bordure : 1px solide var(--secondaire);
+    rayon de la bordure : 70 px ;
+}
+
+.témoignage-gauche img:nth-child(1),
+.témoignage-droit img:nth-child(3) {
+    largeur : 70px ;
+    hauteur : 70px ;
+    haut : 10 % ;
+    gauche : 50 % ;
+    transformer : translateX(-50%);
+}
+
+.témoignage-gauche img:nth-child(2),
+.témoignage-droit img:nth-child(2) {
+    largeur : 60px ;
+    hauteur : 60px ;
+    haut : 50 % ;
+    gauche : 10 % ;
+    transformer : translateY(-50%);
+}
+
+.témoignage-gauche img:nth-child(3),
+.témoignage-droit img:nth-child(1) {
+    largeur : 50px ;
+    hauteur: 50px;
+    bas : 10 % ;
+    droite : 10 %;
+}
+
+.carrousel-de-témoignages .owl-item img {
+    largeur : 120px ;
+    hauteur : 120px ;
+}
+
+.carrousel-de-témoignages .icône-témoignage {
+    position : absolue ;
+    largeur : 40px ;
+    hauteur: 40px;
+    gauche : 50 % ;
+    bas : -15px ;
+    transformer : translateX(-50%);
+    affichage : flex ;
+    align-items:centre;
+    justifier-contenu : centre ;
+    arrière-plan : #FFFFFF ;
+    bordure : 1px solide var(--secondaire);
+    rayon de la bordure : 60 px ;
+}
+
+.carrousel-de-témoignages .owl-dots {
+    hauteur: 40px;
+    marge supérieure : 25 px ;
+    affichage : flex ;
+    align-items:centre;
+    justifier-contenu : centre ;
+}
+
+.carrousel-de-témoignages .owl-dot {
+    position : relative ;
+    affichage : bloc en ligne ;
+    marge: 0 5px;
+    largeur : 30px ;
+    hauteur: 30px;
+    arrière-plan : #FFFFFF ;
+    bordure : 2px solide var(--secondaire);
+    rayon de la bordure : 30 px ;
+    transition : .5s;
+}
+
+.carrousel-de-témoignages .owl-dot::after {
+    position : absolue ;
+    contenu: "";
+    largeur : 16px ;
+    hauteur : 16px ;
+    haut : 5 px ;
+    gauche : 5px ;
+    rayon de la bordure : 16 px ;
+    arrière-plan : var(--secondaire) ;
+    transition : .5s;
+}
+
+.carrousel-de-témoignages .owl-dot.active::after {
+    arrière-plan : var(--primary);

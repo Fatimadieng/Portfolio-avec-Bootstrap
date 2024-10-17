@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Fatou DIENG</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #f0f8ff;
+    }
+    .navbar-nav .nav-link {
+      color: black;
+      font-weight: bold;
+    }
+    .nav-link.active {
+      color: rgb(0, 0, 0); /* Couleur par défaut pour "Accueil" */
+    }
+    .hero-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background-color: white;
+      position: relative;
+      height: 100vh;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    /* "Hey, je suis" en bleu dégradé */
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #66a3ff, #66a3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* "Fatou DIENG" en noir */
+    .hero-text h1 span {
+      color: black;
+    }
+    .btn-custom {
+      margin-right: 20px;
+    }
+    /* Bouton Play Video avec texte et icône */
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      background-color: transparent;
+      border: 2px solid #007bff;
+      color: #007bff;
+      padding: 10px 0px;
+      border-radius: 50px;
+      font-size: 1rem;
+    }
+    .btn-play i {
+      margin-right: 10px;
+    }
+    .btn-play:hover {
+      background-color: #000000;
+      color: white;
+    }
+    .hero-img img {
+  max-width: 400px; /* Modifiez cette valeur selon vos besoins */
+  height: auto; /* Assurez-vous que l'image conserve ses proportions */
+  border-radius: 50px; /* Ajouter un arrondi à l'image si souhaité */
+  left: auto; 
+}
+
+    .social-icons {
+      position: absolute;
+      top: 40%;
+      right: 30px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+    }
+    /* Taille réduite des icônes des réseaux sociaux */
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px; /* Taille réduite */
+      height: 30px;
+      background-color: #fff;
+      border: 2px solid #007bff;
+      border-radius: 50%;
+      color: #000000;
+      font-size: 1rem; /* Taille plus petite */
+      margin: 10px 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    .skills-section {
+  background-color: #f8f9fa; /* Couleur de fond douce */
+  padding: 60px 0;
+}
+
+.skills-section h2 {
+  color: #0033cc;
+  margin-bottom: 40px;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-section li {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.skills-section li i {
+  color: #68c2f9;
+  margin-left: 10px;
+}
+#realisations img {
+  margin-bottom: 20px;
+  border-radius: 0px;
+}
+
+#portfolio .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .card-title {
+  font-weight: bold;
+}
+
+#portfolio .nav-pills .nav-link.active {
+  background-color: #007bff;
+  border-radius: 20px;
+}
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+footer ul li a:hover {
+  color: #ffc107; /* couleur jaune au hover */
+}
+
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .list-inline-item a {
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+footer .list-inline-item a:hover {
+  color: #91e1f7; /* couleur jaune pour les icônes au survol */
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" style="height: 50px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">À propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+        <h3 class="text-primary mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hey, je suis</font></font></h3>
+        <h1 class="display-3 mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fatou DIENG</font></font></h1>
+        <h2 class="typed-text-output d-inline"></h2><span class="typed-cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Référente digital</font></font></span>
+        <div class="typed-text d-none"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Concepteur Web, Développeur Web, Développeur Front End, Concepteur d'applications, Développeur d'applications</font></font></div>
+        <div class="d-flex align-items-center pt-5">
+            <a href="" class="btn btn-primary py-3 px-4 me-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Télécharger le CV</font></font></a>
+            <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                <span></span>
+            </button>
+            <h5 class="ms-4 mb-0 d-none d-sm-block"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Play Vidéo</font></font></h5>
+        </div>
+    </div>
+    <div class="hero-img">
+      <!-- Remplacez cette URL avec le chemin vers l'image réelle -->
+      <img src="profile.png.png" alt="Fatou Dieng">
+    </div>
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+<!-- Section À propos -->
+ <section id="skills" class="skills-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+       
+        <h2 class="mb-4">À propos </h2>
+          <div class="col-lg-6">
+            <img src="Image KMF.jpg" alt="À propos de Fatou Dieng" class="img-fluid rounded-circle" style="max-width:150px">
+            <div class="col-lg-6"></div>
+            </div>
+            
+            <p>
+            Je m’appelle Fatou DIENG, je suis Sénégalaise et je vis au Sénégal. Après l’obtention de mon baccalauréat en série S2, j’ai été orientée à l'Université Cheikh Anta Diop (UCAD), à la Faculté des Sciences Économiques et de Gestion, où j'ai obtenu une Licence en Analyse et Politique Économique, suivie d'une Maîtrise en Économie Rurale.
+          </p>
+          <p>
+            Après avoir acquis de solides fondamentaux en économie, j'ai ressenti le besoin de me rapprocher du monde numérique en constante évolution. Actuellement, je suis apprenante en Référent Digital chez Simplon Sénégal. Ma formation sur ce dernier a été un véritable déclic. Celle-ci m’a dotée des compétences clés en communication digitale, UX/UI design, design graphique, marketing digital et gestion de projet. C'est lors des projets réalisés que j'ai découvert le pouvoir du digital pour créer un impact positif.
+          </p>
+          <p>
+            Pour toutes questions, n’hésitez pas à me contacter !
+          </p>
+        
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Compétences -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <h1 class="display-5 mb-5">Compétences et Expériences</h1>
+                    <h3 class="mb-4">Mes compétences</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">CSS</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Communication digitale</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Gestion de projet</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Design</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Marketing</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade p-0">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>UI Designer</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2025</p>
+                                    <h6 class="mb-0">SIMPLON</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Référent digital</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2025</p>
+                                    <h6 class="mb-0">SIMPLON</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Gestion de projet</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022 - 2025</p>
+                                    <h6 class="mb-0">UCAD/FASEG</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Economie rural</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022 - 2023</p>
+                                    <h6 class="mb-0">UCAD/FASEG</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade p-0 active show">
+                            <div class="row gy-5 gx-4">
+                                <div class="col-sm-6">
+                                    <h5>UI Design</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2025</p>
+                                    <h6 class="mb-0">SIMPLON</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Référent digital</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2024 - 2025</p>
+                                    <h6 class="mb-0">SIMPLON</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Gestion de projet</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022 - 2025</p>
+                                    <h6 class="mb-0">UCAD/FASEG</h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5>Economie rurale</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">2022 - 2023</p>
+                                    <h6 class="mb-0">UCAD/FASEG</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Section Outils -->
+<section id="tools" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Outils</h2>
+      <div class="d-flex justify-content-around align-items-center">
+        <img src="Illustrator.png" alt="Adobe Illustrator" class="img-fluid tool-icon">
+        <img src="Photoshop.png" alt="Adobe Photoshop" class="img-fluid tool-icon">
+        <img src="Caneva.jfif" alt="Canva" class="img-fluid tool-icon">
+        <img src="Trello.jpeg" alt="Trello" class="img-fluid tool-icon">
+        <img src="Miro.jfif" alt="Miro" class="img-fluid tool-icon">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Section Mes services -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Mes services</h2>
+      <div class="row text-center">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-desktop fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">RÉDACTION DE PROJET</h5>
+              <p class="card-text">Je fais des rédactions de projets, capable de faire l’étude de marché, établir le bilan financier afin de connaitre la rentabilité du projet... voir plus</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-code fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">WEB DEVELOPMENT</h5>
+              <p class="card-text">Conception de maquette et de sites pour tout types de projets... voir plus</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-camera fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">PHOTOGRAPHE</h5>
+              <p class="card-text">Faire des prises de vues et des vidéos de montages via des outils de haut professionnel... voir plus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <!-- Service 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-mobile-alt fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">RESPONSIVE DESIGN</h5>
+              <p class="card-text">Conception de sites web adaptatifs pour tous types d'écrans... voir plus</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-paint-brush fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">GRAPHIC DESIGN</h5>
+              <p class="card-text">Création de designs graphiques pour supports de communication... voir plus</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="service-icon mb-3">
+                <i class="fas fa-chart-line fa-3x" style="color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">MARKETING SERVICES</h5>
+              <p class="card-text">Gestion de campagnes marketing en ligne pour booster la visibilité... voir plus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+          <div class="counter-box pt-4 pt-md-0">
+            <div class="counter-ico">
+              <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+            </div>
+          </div>
+        </div>
+       
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Projets</h2>
+      <ul class="nav nav-pills justify-content-center mb-4" id="projectTabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#all" data-bs-toggle="tab">Tout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gestion" data-bs-toggle="tab">Gestion de projet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#marketing" data-bs-toggle="tab">Marketing digital</a>
+        </li>
+        <!-- Ajoute d'autres catégories si nécessaire -->
+      </ul>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="DF.png" class="card-img-top" alt="Projet DF">
+            <div class="card-body">
+              <h5 class="card-title">Projet DF</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="WhatsApp Image 2024-10-16 at 22.52.52.jpeg" class="card-img-top" alt="Projet SO">
+            <div class="card-body">
+              <h5 class="card-title">Projet SO</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="logo simplon garden.jfif" class="card-img-top" alt="Projet SG">
+            <div class="card-body">
+              <h5 class="card-title">Projet SG</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="realisations" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Réalisations</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="Kakemono BC3.png" class="img-fluid" alt="Lancement officiel">
+        </div>
+        <div class="col-md-4">
+          <img src="DF.png" class="img-fluid" alt="Delices Fatima">
+        </div>
+        <div class="col-md-4">
+          <img src="Mochup Carte visite pour un campagne publicitaire pour resto.png" class="img-fluid" alt="Delices de Fatima">
+        </div>
+        <div class="col-md-4">
+            <img src="Mockup Carte visite.png" class="img-fluid" alt="Carte visite">
+          </div>
+      </div>
+      <div class="text-center py-4">
+        <button class="btn btn-primary">Voir plus</button>
+      </div>
+    </div>
+  </section>
+  
+  <!--/ Section Blog Star /-->
+  <section id="blog" class="blog-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Blog
+            </h3>
+            <p class="subtitle-a">
+              Voici un aperçu sur mes activités personnelles
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="post-1.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">VOYAGE</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">Voir plus d'idées</a></h3>
+              <p class="card-description">
+                 Visites de proximité : Explorez la région
+                  Voyages bénévoles : Participez 
+                   Activités d aventure : Stage rural.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                    <img src="Image KMF.jpg" alt="" class="img-fluid rounded-circle" style="max-width:30px">
+                    <span class="author">Fatou DIENG</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="post-2.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">PATISSERIE</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">Les recettes</a></h3>
+              <p class="card-description">
+                Passionnée de pâtisserie, je partage
+                avec vous sur ce blog mes meilleures
+                recettes... voir plus.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                    <img src="Image KMF.jpg" alt="" class="img-fluid rounded-circle" style="max-width:30px">
+                    <span class="author">Fatou DIENG</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="post-3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">WEB DESIGN</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">S'inspirer</a></h3>
+              <p class="card-description">
+                J’aime m inspirer pour faire des
+                coneptions de design époustouflant,
+                maquetter et créer des sites...voir plus
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="Image KMF.jpg" alt="" class="img-fluid rounded-circle" style="max-width:30px">
+                  <span class="author">Fatou DIENG</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Blog End /-->
+
+  <!--/ Section Contact-Footer Star /-->
+  <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Contact
+                    </h5>
+                  </div>
+                  <div>
+                      <form action="" method="post" role="form" class="contactForm">
+                      <div id="errormessage"></div>
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Noms" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email">
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Message" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                              <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <button type="submit" class="button button-a button-big button-rouded">Envoyer</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Entrer en contact
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <ul class="list-ico">
+                      <li><span class="ion-ios-location"></span> Yeumbeul</li>
+                      <li><span class="ion-ios-telephone"></span>77 747 50 5</li>
+                      <li><span class="ion-email"></span> fatimadieng26@gmail.com</li>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+              <div class="row">
+                <!-- Section À propos -->
+                <div class="col-md-4 mb-3">
+                  <h5 class="text-uppercase">À propos</h5>
+                  <p>
+                    Je m'appelle Fatou DIENG, spécialisée en communication digitale, gestion de projet et marketing digital. 
+                  </p>
+                </div>
+          
+                <!-- Liens de navigation -->
+                <div class="col-md-4 mb-3">
+                  <h5 class="text-uppercase">Liens rapides</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#about" class="text-light">À propos</a></li>
+                    <li><a href="#portfolio" class="text-light">Portfolio</a></li>
+                    <li><a href="#services" class="text-light">Services</a></li>
+                    <li><a href="#contact" class="text-light">Contact</a></li>
+                  </ul>
+                </div>
+          
+                <!-- Section Réseaux sociaux -->
+                <div class="col-md-4 mb-3">
+                  <h5 class="text-uppercase">Suivez-moi</h5>
+                  <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Copyright -->
+              <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="copyright-box">
+              <p class="copyright">© Copyright2024 <strong>Fatou DIENG</strong>. Tous droits réservés</p>
+              <div class="credits">
+                <!--
+                  All the links in the footer should remain intact.
+                  You can delete the links only if you purchased the pro version.
+                  Licensing information: https://bootstrapmade.com/license/
+                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
+                -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+  
+
+  <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-chevron-up"></i></a>
+  
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
